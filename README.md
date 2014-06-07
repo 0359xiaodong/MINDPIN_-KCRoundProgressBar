@@ -1,3 +1,4 @@
+
 圆形进度条组件</br>
 
         <attr name="text" format="string" />
@@ -26,3 +27,5 @@
 
 
 大部分控件属性，可以通过在xml和java文件中设置
+
+
