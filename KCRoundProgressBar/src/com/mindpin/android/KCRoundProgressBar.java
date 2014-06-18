@@ -1,4 +1,4 @@
-package com.taotao.kcroundprogressbar;
+package com.mindpin.android;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,6 +14,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Scroller;
+import com.mindpin.android.kcroundprogressbar.R;
 
 /**
  * An indicator of progress, similar to Android's ProgressBar. Can be used in
@@ -24,7 +25,7 @@ import android.widget.Scroller;
  *         Licensed under the Creative Commons Attribution 3.0 license see:
  *         http://creativecommons.org/licenses/by/3.0/
  */
-public class ProgressWheel extends View {
+public class KCRoundProgressBar extends View {
 	
 
 	// Sizes (with defaults)
@@ -33,11 +34,11 @@ public class ProgressWheel extends View {
 	private int fullRadius = 100;
 	private int circleRadius = 80;
 	
-	private int barLength = 60;
-	private int barWidth = 10;
-	private int borderWidth = 0;
-	private int bgWidth;
-	private int textSize = 18;
+	private int fg_length = 60;
+	private int fg_width = 10;
+	private int border_width = 0;
+	private int bg_width;
+	private int text_size = 18;
 	private int start_angle = -90;
 
 	// Padding (with defaults)
@@ -47,10 +48,10 @@ public class ProgressWheel extends View {
 	private int paddingRight = 5;
 
 	// Colors (with defaults)
-	private int barColor = 0x87ceeb;
-	private int bgColor =  0xaa888888;
-	private int borderColor;
-	private int textColor = 0xFF000000;
+	private int fg_color = 0x87ceeb;
+	private int bg_color =  0xaa888888;
+	private int border_color;
+	private int text_color = 0xFF000000;
 
 	// Paints
 	private Paint barPaint = new Paint();
@@ -65,7 +66,7 @@ public class ProgressWheel extends View {
 	private RectF bgBounds;
 	
 	private float text_height;
-	private boolean show_text = true;
+	private boolean text_display = true;
 	
 
 	// Animation
@@ -105,10 +106,10 @@ public class ProgressWheel extends View {
 	 * @param context
 	 * @param attrs
 	 */
-	public ProgressWheel(Context context, AttributeSet attrs) {
+	public KCRoundProgressBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		//parsePadding(context, attrs);
-		parseAttributes(context.obtainStyledAttributes(attrs, R.styleable.ProgressWheel));
+		parseAttributes(context.obtainStyledAttributes(attrs, R.styleable.KCRoundProgressBar));
 		
 	}
 	
@@ -137,9 +138,6 @@ public class ProgressWheel extends View {
 		setupBounds();
 		setupPaints();
 		
-		
-		
-		
 	}
 	
 
@@ -147,27 +145,27 @@ public class ProgressWheel extends View {
 	 * Set the properties of the paints we're using to draw the progress wheel
 	 */
 	private void setupPaints() {
-		barPaint.setColor(barColor);
+		barPaint.setColor(fg_color);
 		barPaint.setAntiAlias(true);
 		barPaint.setStyle(Style.STROKE);
-		barPaint.setStrokeWidth(barWidth);
+		barPaint.setStrokeWidth(fg_width);
 
-		borderPaint.setColor(borderColor);
+		borderPaint.setColor(border_color);
 		borderPaint.setAntiAlias(true);
 		borderPaint.setStyle(Style.STROKE);
-		borderPaint.setStrokeWidth(borderWidth);
+		borderPaint.setStrokeWidth(border_width);
 
-		bgPaint.setColor(bgColor);
+		bgPaint.setColor(bg_color);
 		bgPaint.setAntiAlias(true);
 		bgPaint.setStyle(Style.STROKE);
-		bgPaint.setStrokeWidth(bgWidth);
+		bgPaint.setStrokeWidth(bg_width);
 
-		textPaint.setColor(textColor);
+		textPaint.setColor(text_color);
 		textPaint.setStyle(Style.FILL);
 		textPaint.setAntiAlias(true);
-		textPaint.setTextSize(textSize);
+		textPaint.setTextSize(text_size);
 		
-		text_height = getFontHeight(textSize);
+		text_height = getFontHeight(text_size);
 	}
 	
 	public float getFontHeight(float fontSize)
@@ -203,29 +201,29 @@ public class ProgressWheel extends View {
 		
 		Log.i(VIEW_LOG_TAG, "before inset RECT: " + rectBounds);
         
-		if(borderWidth > 0){
-			float hw = borderWidth/2.0f;
+		if(border_width > 0){
+			float hw = border_width/2.0f;
 			borderBounds = new RectF(rectBounds.left + hw, rectBounds.top + hw, 
 					rectBounds.right - hw, rectBounds.bottom - hw);
 			
-			rectBounds.inset(2*borderWidth, 2*borderWidth);
+			rectBounds.inset(2*border_width, 2*border_width);
 		}
 		
-		if(bgWidth > 0){
-			float hw = bgWidth/2.0f;
+		if(bg_width > 0){
+			float hw = bg_width/2.0f;
 			bgBounds = new RectF(rectBounds.left + hw, rectBounds.top + hw, 
 					rectBounds.right - hw, rectBounds.bottom - hw);
 		}
 		
-		float hw = barWidth/2.0f;
+		float hw = fg_width/2.0f;
 		barBounds = new RectF(rectBounds.left + hw, rectBounds.top + hw, 
 				rectBounds.right - hw, rectBounds.bottom - hw);
 		
 		Log.i(VIEW_LOG_TAG, "RECT: " + rectBounds + " <> " + barBounds);
 		
-		Log.d(VIEW_LOG_TAG, "bar_width = " + barWidth + " rim_width = " + borderWidth);
-		fullRadius = (this.getLayoutParams().width - paddingRight - barWidth) / 2;
-		circleRadius = (fullRadius - barWidth) + 1;
+		Log.d(VIEW_LOG_TAG, "bar_width = " + fg_width + " rim_width = " + border_width);
+		fullRadius = (this.getLayoutParams().width - paddingRight - fg_width) / 2;
+		circleRadius = (fullRadius - fg_width) + 1;
 	}
 
 	/**
@@ -235,41 +233,42 @@ public class ProgressWheel extends View {
 	 *            the attributes to parse
 	 */
 	private void parseAttributes(TypedArray a) {
-		int tem = a.getInt(R.styleable.ProgressWheel_progress, angle);
-		angle = 360*tem/max_value;
+		int tem = a.getInt(R.styleable.KCRoundProgressBar_progress, angle);
+		angle = 360*(tem - min)/(max - min);
 		
-		show_text = a.getBoolean(R.styleable.ProgressWheel_show_text, show_text);
-		max_value = a.getInt(R.styleable.ProgressWheel_max_value, max_value);
+		text_display = a.getBoolean(R.styleable.KCRoundProgressBar_text_display, text_display);
+		max = a.getInt(R.styleable.KCRoundProgressBar_max_value, max);
+		min = a.getInt(R.styleable.KCRoundProgressBar_min_value, min);
 		
-		loading_mode = a.getBoolean(R.styleable.ProgressWheel_loading_mode, loading_mode);
+		loading_mode = a.getBoolean(R.styleable.KCRoundProgressBar_loading_mode, loading_mode);
 		
-		start_angle = a.getInteger(R.styleable.ProgressWheel_start_angle, start_angle);
+		start_angle = a.getInteger(R.styleable.KCRoundProgressBar_start_angle, start_angle);
 		
-		barWidth = (int) a.getDimension(R.styleable.ProgressWheel_bar_width, barWidth);
-		bgWidth = (int) a.getDimension(R.styleable.ProgressWheel_bar_bg_width, barWidth);
+		fg_width = (int) a.getDimension(R.styleable.KCRoundProgressBar_fg_width, fg_width);
+		bg_width = (int) a.getDimension(R.styleable.KCRoundProgressBar_bg_width, fg_width);
+    
+		border_width = (int) a.getDimension(R.styleable.KCRoundProgressBar_border_width, border_width);
 
-		borderWidth = (int) a.getDimension(R.styleable.ProgressWheel_border_width, borderWidth);
+		rollSpeed = (int) a.getDimension(R.styleable.KCRoundProgressBar_roll_speed, rollSpeed);
 
-		rollSpeed = (int) a.getDimension(R.styleable.ProgressWheel_roll_speed, rollSpeed);
-
-		delayMillis = (int) a.getInteger(R.styleable.ProgressWheel_roll_delay_millis, delayMillis);
+		delayMillis = (int) a.getInteger(R.styleable.KCRoundProgressBar_roll_delay_millis, delayMillis);
 		if (delayMillis < 0) {
 			delayMillis = 0;
 		}
 
-		barColor = a.getColor(R.styleable.ProgressWheel_bar_color, barColor);
-		borderColor = a.getColor(R.styleable.ProgressWheel_border_color, barColor);
-		bgColor = a.getColor(R.styleable.ProgressWheel_bar_bg_color, bgColor);
+		fg_color = a.getColor(R.styleable.KCRoundProgressBar_fg_color, fg_color);
+		border_color = a.getColor(R.styleable.KCRoundProgressBar_border_color, fg_color);
+		bg_color = a.getColor(R.styleable.KCRoundProgressBar_bg_color, bg_color);
 
-		barLength = (int) a.getDimension(R.styleable.ProgressWheel_bar_length, barLength);
+		fg_length = (int) a.getDimension(R.styleable.KCRoundProgressBar_fg_length, fg_length);
 
-		textSize = (int) a.getDimension(R.styleable.ProgressWheel_text_size, textSize);
+		text_size = (int) a.getDimension(R.styleable.KCRoundProgressBar_text_size, text_size);
 
-		textColor = (int) a.getColor(R.styleable.ProgressWheel_text_color, textColor);
+		text_color = (int) a.getColor(R.styleable.KCRoundProgressBar_text_color, text_color);
 
 		// if the text is empty , so ignore it
-		if (a.hasValue(R.styleable.ProgressWheel_text)) {
-			setText(a.getString(R.styleable.ProgressWheel_text));
+		if (a.hasValue(R.styleable.KCRoundProgressBar_text)) {
+			setText(a.getString(R.styleable.KCRoundProgressBar_text));
 		}
 
 		
@@ -284,25 +283,25 @@ public class ProgressWheel extends View {
 
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
-		Log.v(VIEW_LOG_TAG, "---onDraw----" + angle);
+		//Log.v(VIEW_LOG_TAG, "---onDraw----" + angle);
 		// Draw the rim
-		if(borderWidth > 0){
+		if(border_width > 0){
 			canvas.drawArc(borderBounds, 360, 360, false, borderPaint);
 		}
 		
 		//draw the bg
-		if(bgWidth > 0){
+		if(bg_width > 0){
 			canvas.drawArc(bgBounds, 360, 360, false, bgPaint);
 		}
 				
 		// Draw the bar
 		if (loading_mode) {
-			canvas.drawArc(barBounds, angle + start_angle, barLength, false, barPaint);
+			canvas.drawArc(barBounds, angle + start_angle, fg_length, false, barPaint);
 		} else {
 			canvas.drawArc(barBounds, start_angle, angle, false, barPaint);
 		}
 		
-		if(show_text){
+		if(text_display){
 			int offsetNum = 1;
 			for (String s : splitText) {
 				float offset = textPaint.measureText(s) / 2;
@@ -344,22 +343,23 @@ public class ProgressWheel extends View {
 	}
 
 	
-	private int max_value = 100;
+	private int max = 100;
+	private int min = 0;
 	
 	/**
 	 * 设置进度当前值
 	 */
-	public void setProgress(int i) {
+	public void set_current(int i) {
 		if(loading_mode) return;
-		if(i < 0) i = 0;
-		if(i > max_value) i = max_value;
-		angle = 360*i/max_value;
+		if(i < min) i = min;
+		if(i > max) i = max;
+		angle = 360*(i - min)/(max - min);
 		setText(Math.round(((float) angle / 360) * 100) + "%");
 		postInvalidate();
 	}
 	
 	public int getProgress() {
-		return angle*max_value/360;
+		return angle*(max - min)/360;
 	}
 	
 	private Scroller mScroller = new Scroller(getContext());
@@ -367,11 +367,11 @@ public class ProgressWheel extends View {
 	/**
 	 * 设置进度当前值,运行这个方法后组件的数字从正在显示的值平滑渐变的变化到这个值
 	 */
-	public void setProgressSmooth(int i) {
+	public void set_current_smooth(int i) {
 		if(loading_mode) return;
-		if(i < 0) i = 0;
-		if(i > max_value) i = max_value;
-		int temPrpgress = 360*i/max_value;
+		if(i < min) i = min;
+		if(i > max) i = max;
+		int temPrpgress = 360*(i - min)/(max - min);
 		if(temPrpgress == angle) return;
 		Log.i(VIEW_LOG_TAG, "tem:" + temPrpgress + " / " + angle);
 		if(!mScroller.isFinished()) mScroller.abortAnimation();
@@ -386,7 +386,7 @@ public class ProgressWheel extends View {
 		if(mScroller.computeScrollOffset()){
 			
 			angle = mScroller.getCurrX();
-			Log.v(VIEW_LOG_TAG, "progress = " + angle);
+			//Log.v(VIEW_LOG_TAG, "progress = " + angle);
 			setText(Math.round(((float) angle / 360) * 100) + "%");
 			invalidate();
 		}else{
@@ -403,7 +403,7 @@ public class ProgressWheel extends View {
 	 *            the text to show ('\n' constitutes a new line)
 	 */
 	public void setText(String text) {
-		if(!show_text) return;
+		if(!text_display) return;
 		this.text = text;
 		splitText = this.text.split("\n");
 	}
@@ -423,77 +423,77 @@ public class ProgressWheel extends View {
 		return loading;
 	}
 	
-	public int getBarLength() {
-		return barLength;
+	public int get_fg_length() {
+		return fg_length;
 	}
 
 
 
 
-	public void setBarLength(int barLength) {
-		this.barLength = barLength;
+	public void set_fg_length(int barLength) {
+		this.fg_length = barLength;
 	}
 
 
 
 
-	public int getBarWidth() {
-		return barWidth;
+	public int get_fg_width() {
+		return fg_width;
 	}
 
 
 
 
-	public void setBarWidth(int barWidth) {
-		this.barWidth = barWidth;
+	public void set_fg_width(int barWidth) {
+		this.fg_width = barWidth;
 	}
 
 
 
 
-	public int getBorderWidth() {
-		return borderWidth;
+	public int get_border_width() {
+		return border_width;
 	}
 
 
 
 
-	public void setBorderWidth(int borderWidth) {
-		this.borderWidth = borderWidth;
+	public void set_border_width(int borderWidth) {
+		this.border_width = borderWidth;
 	}
 
 
 
 
-	public int getBgWidth() {
-		return bgWidth;
+	public int get_bg_width() {
+		return bg_width;
 	}
 
 
 
 
-	public void setBgWidth(int bgWidth) {
-		this.bgWidth = bgWidth;
+	public void set_bg_width(int bgWidth) {
+		this.bg_width = bgWidth;
 	}
 
 
 
 
-	public int getTextSize() {
-		return textSize;
+	public int get_text_size() {
+		return text_size;
 	}
 
 
 
 
-	public void setTextSize(int textSize) {
-		this.textSize = textSize;
+	public void set_text_size(int textSize) {
+		this.text_size = textSize;
 	}
 
 
 
 
-	public int getStart_angle() {
+	public int get_start_angle() {
 		return start_angle;
 	}
 
@@ -503,15 +503,15 @@ public class ProgressWheel extends View {
      * 设置起始角度
      * @param start_angle
      */
-	public void setStart_angle(int start_angle) {
+	public void set_start_angle(int start_angle) {
 		this.start_angle = start_angle;
 	}
 
 
 
 
-	public int getBarColor() {
-		return barColor;
+	public int get_fg_color() {
+		return fg_color;
 	}
 
 
@@ -520,15 +520,15 @@ public class ProgressWheel extends View {
      * 设置前景色
      * @param barColor
      */
-	public void setBarColor(int barColor) {
-		this.barColor = barColor;
+	public void set_fg_color(int barColor) {
+		this.fg_color = barColor;
 	}
 
 
 
 
-	public int getBgColor() {
-		return bgColor;
+	public int get_bg_color() {
+		return bg_color;
 	}
 
 
@@ -537,43 +537,43 @@ public class ProgressWheel extends View {
      * 设置背景色
      * @param bgColor
      */
-	public void setBgColor(int bgColor) {
-		this.bgColor = bgColor;
+	public void set_bg_color(int bgColor) {
+		this.bg_color = bgColor;
 	}
 
 
 
 
-	public int getBorderColor() {
-		return borderColor;
+	public int get_border_color() {
+		return border_color;
 	}
 
 
 
 
-	public void setBorderColor(int borderColor) {
-		this.borderColor = borderColor;
+	public void set_border_color(int borderColor) {
+		this.border_color = borderColor;
 	}
 
 
 
 
-	public int getTextColor() {
-		return textColor;
+	public int get_text_color() {
+		return text_color;
 	}
 
 
 
 
-	public void setTextColor(int textColor) {
-		this.textColor = textColor;
+	public void set_text_color(int textColor) {
+		this.text_color = textColor;
 	}
 
 
 
 
-	public boolean isShow_text() {
-		return show_text;
+	public boolean is_text_display() {
+		return text_display;
 	}
 
 
@@ -582,8 +582,8 @@ public class ProgressWheel extends View {
      * 设置是否显示进度条组件中间的数字
      * @param show_text
      */
-	public void setShow_text(boolean show_text) {
-		this.show_text = show_text;
+	public void set_text_display(boolean show_text) {
+		this.text_display = show_text;
 	}
 
 
@@ -642,11 +642,8 @@ public class ProgressWheel extends View {
 		this.loading_mode = loading_mode;
 	}
 
-
-
-
-	public int getMax_value() {
-		return max_value;
+	public int get_min() {
+		return min;
 	}
 
 
@@ -655,8 +652,23 @@ public class ProgressWheel extends View {
      * 设置进度最大值
      * @param max_value
      */
-	public void setMax_value(int max_value) {
-		this.max_value = max_value;
+	public void set_min(int max_value) {
+		this.min = min;
+	}
+
+
+	public int get_max() {
+		return max;
+	}
+
+
+
+    /**
+     * 设置进度最大值
+     * @param max_value
+     */
+	public void set_max(int max_value) {
+		this.max = max_value;
 	}
 
 

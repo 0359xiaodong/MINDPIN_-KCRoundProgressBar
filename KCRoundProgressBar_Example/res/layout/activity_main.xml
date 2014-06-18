@@ -10,13 +10,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <com.taotao.kcroundprogressbar.ProgressWheel
+        <com.mindpin.android.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_1"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            ProgressWheel:bar_color="#339BB9"
-            ProgressWheel:bar_width="6dp"
+            ProgressWheel:fg_color="#339BB9"   
+            ProgressWheel:fg_width="6dp"
             ProgressWheel:loading_mode="false"
             ProgressWheel:max_value="200"
             ProgressWheel:roll_speed="2dp"
@@ -27,14 +27,14 @@
             android:background="#55aabbcc"
             android:padding="10dp" />
 
-        <com.taotao.kcroundprogressbar.ProgressWheel
+        <com.mindpin.android.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_2"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            ProgressWheel:bar_color="#339BB9"
-            ProgressWheel:bar_width="6dp"
+            ProgressWheel:fg_color="#339BB9"
+            ProgressWheel:fg_width="6dp"
             ProgressWheel:loading_mode="false"
             ProgressWheel:max_value="100"
             ProgressWheel:roll_speed="2dp"
@@ -51,32 +51,32 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <com.taotao.kcroundprogressbar.ProgressWheel
+        <com.mindpin.android.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_3"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            ProgressWheel:bar_color="#339BB9"
-            ProgressWheel:bar_width="6dp"
+            ProgressWheel:fg_color="#339BB9"
+            ProgressWheel:fg_width="6dp"
             ProgressWheel:border_width="2dp"
-            ProgressWheel:bar_bg_width="0dp"
+            ProgressWheel:bg_width="0dp"
             ProgressWheel:loading_mode="false"
-            ProgressWheel:max_value="200"
+            ProgressWheel:max_value="200"  
             ProgressWheel:progress="20"
             ProgressWheel:roll_speed="2dp"
             ProgressWheel:start_angle="45"
-            ProgressWheel:show_text="false"
+            ProgressWheel:text_display="false"
             android:background="#ff000000"
             android:padding="10dp" />
 
-        <com.taotao.kcroundprogressbar.ProgressWheel
+        <com.mindpin.android.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_4"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            ProgressWheel:bar_color="#ffbbcc"
-            ProgressWheel:bar_width="6dp"
+            ProgressWheel:fg_color="#ffbbcc"
+            ProgressWheel:fg_width="6dp"
             ProgressWheel:loading_mode="true"
             ProgressWheel:max_value="100"
             ProgressWheel:roll_speed="2dp"

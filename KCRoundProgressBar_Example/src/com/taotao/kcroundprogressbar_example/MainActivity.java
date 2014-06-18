@@ -1,6 +1,7 @@
 package com.taotao.kcroundprogressbar_example;
 
-import com.taotao.kcroundprogressbar.ProgressWheel;
+
+import com.mindpin.android.KCRoundProgressBar;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,21 +9,22 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+
 public class MainActivity extends Activity {
 	public String TAG = "MainActiviy";
-	ProgressWheel pwOne;
-	ProgressWheel pwTwo;
-	ProgressWheel pwThree;
-	ProgressWheel pwFour;
+	KCRoundProgressBar pwOne;
+	KCRoundProgressBar pwTwo; 
+	KCRoundProgressBar pwThree;
+	KCRoundProgressBar pwFour;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		pwOne = (ProgressWheel) findViewById(R.id.pro_1);
-		pwTwo = (ProgressWheel) findViewById(R.id.pro_2);
-		pwThree = (ProgressWheel) findViewById(R.id.pro_3);
-		pwFour = (ProgressWheel) findViewById(R.id.pro_4);
+		pwOne = (KCRoundProgressBar) findViewById(R.id.pro_1);
+		pwTwo = (KCRoundProgressBar) findViewById(R.id.pro_2);
+		pwThree = (KCRoundProgressBar) findViewById(R.id.pro_3);
+		pwFour = (KCRoundProgressBar) findViewById(R.id.pro_4);
 		
 		pwOne.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
@@ -36,11 +38,11 @@ public class MainActivity extends Activity {
 		
 		pwTwo.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-				if(wheelProgress >= pwTwo.getMax_value()){
+				if(wheelProgress >= pwTwo.get_max()){
 					wheelProgress = 0;
 				}
 				wheelProgress += 30;
-				pwTwo.setProgressSmooth(wheelProgress);
+				pwTwo.set_current_smooth(wheelProgress);
 
 				
 			}
@@ -80,8 +82,8 @@ public class MainActivity extends Activity {
 	final Runnable r = new Runnable() {
 		public void run() {
 			wheelRunning = true;
-			while (wheelProgress <= pwOne.getMax_value()) {
-				pwOne.setProgress(wheelProgress);
+			while (wheelProgress <= pwOne.get_max()) {
+				pwOne.set_current(wheelProgress);
 				wheelProgress++;
 				try {
 					Thread.sleep(20);
@@ -99,8 +101,8 @@ public class MainActivity extends Activity {
 			wheelRunning = true;
 			wheelProgress = pwThree.getProgress();
 			Log.i(TAG, "progress = " + wheelProgress);
-			while (wheelProgress <= pwThree.getMax_value()) {
-				pwThree.setProgress(wheelProgress);
+			while (wheelProgress <= pwThree.get_max()) {
+				pwThree.set_current(wheelProgress);
 				wheelProgress++;
 				try {
 					Thread.sleep(20);

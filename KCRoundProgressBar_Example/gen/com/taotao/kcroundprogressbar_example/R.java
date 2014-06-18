@@ -17,7 +17,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int bar_bg_color=0x7f010008;
+        public static final int bg_color=0x7f010008;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -27,36 +27,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int bar_bg_width=0x7f010009;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_color=0x7f010005;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_length=0x7f010004;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_width=0x7f010003;
+        public static final int bg_width=0x7f010009;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -76,6 +47,35 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int border_width=0x7f010007;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fg_color=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fg_length=0x7f010004;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fg_width=0x7f010003;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -92,6 +92,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int max_value=0x7f01000f;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int min_value=0x7f010010;
         /** <p>Must be one of the following constant values.</p>
 <table>
 <colgroup align="left" />
@@ -102,7 +110,7 @@ containing a value of this type.
 <tr><td><code>progress</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static final int mode=0x7f010012;
+        public static final int mode=0x7f010013;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -110,7 +118,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int progress=0x7f010011;
+        public static final int progress=0x7f010012;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -139,14 +147,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int roll_speed=0x7f01000a;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int show_text=0x7f010010;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -172,6 +172,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int text_color=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int text_display=0x7f010011;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -230,62 +238,64 @@ containing a value of this type.
         public static final int AppTheme=0x7f060001;
     }
     public static final class styleable {
-        /** Attributes that can be used with a ProgressWheel.
+        /** Attributes that can be used with a KCRoundProgressBar.
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ProgressWheel_bar_bg_color com.taotao.kcroundprogressbar_example:bar_bg_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_bar_bg_width com.taotao.kcroundprogressbar_example:bar_bg_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_bar_color com.taotao.kcroundprogressbar_example:bar_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_bar_length com.taotao.kcroundprogressbar_example:bar_length}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_bar_width com.taotao.kcroundprogressbar_example:bar_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_border_color com.taotao.kcroundprogressbar_example:border_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_border_width com.taotao.kcroundprogressbar_example:border_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_loading_mode com.taotao.kcroundprogressbar_example:loading_mode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_max_value com.taotao.kcroundprogressbar_example:max_value}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_mode com.taotao.kcroundprogressbar_example:mode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_progress com.taotao.kcroundprogressbar_example:progress}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_radius com.taotao.kcroundprogressbar_example:radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_roll_delay_millis com.taotao.kcroundprogressbar_example:roll_delay_millis}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_roll_speed com.taotao.kcroundprogressbar_example:roll_speed}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_show_text com.taotao.kcroundprogressbar_example:show_text}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_start_angle com.taotao.kcroundprogressbar_example:start_angle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_text com.taotao.kcroundprogressbar_example:text}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_text_color com.taotao.kcroundprogressbar_example:text_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressWheel_text_size com.taotao.kcroundprogressbar_example:text_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_bg_color com.taotao.kcroundprogressbar_example:bg_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_bg_width com.taotao.kcroundprogressbar_example:bg_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_border_color com.taotao.kcroundprogressbar_example:border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_border_width com.taotao.kcroundprogressbar_example:border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_fg_color com.taotao.kcroundprogressbar_example:fg_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_fg_length com.taotao.kcroundprogressbar_example:fg_length}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_fg_width com.taotao.kcroundprogressbar_example:fg_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_loading_mode com.taotao.kcroundprogressbar_example:loading_mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_max_value com.taotao.kcroundprogressbar_example:max_value}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_min_value com.taotao.kcroundprogressbar_example:min_value}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_mode com.taotao.kcroundprogressbar_example:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_progress com.taotao.kcroundprogressbar_example:progress}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_radius com.taotao.kcroundprogressbar_example:radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_roll_delay_millis com.taotao.kcroundprogressbar_example:roll_delay_millis}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_roll_speed com.taotao.kcroundprogressbar_example:roll_speed}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_start_angle com.taotao.kcroundprogressbar_example:start_angle}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_text com.taotao.kcroundprogressbar_example:text}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_text_color com.taotao.kcroundprogressbar_example:text_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_text_display com.taotao.kcroundprogressbar_example:text_display}</code></td><td></td></tr>
+           <tr><td><code>{@link #KCRoundProgressBar_text_size com.taotao.kcroundprogressbar_example:text_size}</code></td><td></td></tr>
            </table>
-           @see #ProgressWheel_bar_bg_color
-           @see #ProgressWheel_bar_bg_width
-           @see #ProgressWheel_bar_color
-           @see #ProgressWheel_bar_length
-           @see #ProgressWheel_bar_width
-           @see #ProgressWheel_border_color
-           @see #ProgressWheel_border_width
-           @see #ProgressWheel_loading_mode
-           @see #ProgressWheel_max_value
-           @see #ProgressWheel_mode
-           @see #ProgressWheel_progress
-           @see #ProgressWheel_radius
-           @see #ProgressWheel_roll_delay_millis
-           @see #ProgressWheel_roll_speed
-           @see #ProgressWheel_show_text
-           @see #ProgressWheel_start_angle
-           @see #ProgressWheel_text
-           @see #ProgressWheel_text_color
-           @see #ProgressWheel_text_size
+           @see #KCRoundProgressBar_bg_color
+           @see #KCRoundProgressBar_bg_width
+           @see #KCRoundProgressBar_border_color
+           @see #KCRoundProgressBar_border_width
+           @see #KCRoundProgressBar_fg_color
+           @see #KCRoundProgressBar_fg_length
+           @see #KCRoundProgressBar_fg_width
+           @see #KCRoundProgressBar_loading_mode
+           @see #KCRoundProgressBar_max_value
+           @see #KCRoundProgressBar_min_value
+           @see #KCRoundProgressBar_mode
+           @see #KCRoundProgressBar_progress
+           @see #KCRoundProgressBar_radius
+           @see #KCRoundProgressBar_roll_delay_millis
+           @see #KCRoundProgressBar_roll_speed
+           @see #KCRoundProgressBar_start_angle
+           @see #KCRoundProgressBar_text
+           @see #KCRoundProgressBar_text_color
+           @see #KCRoundProgressBar_text_display
+           @see #KCRoundProgressBar_text_size
          */
-        public static final int[] ProgressWheel = {
+        public static final int[] KCRoundProgressBar = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
             0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
             0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
             0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
-            0x7f010010, 0x7f010011, 0x7f010012
+            0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013
         };
         /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bar_bg_color}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bg_color}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -295,12 +305,12 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:bar_bg_color
+          @attr name com.taotao.kcroundprogressbar_example:bg_color
         */
-        public static final int ProgressWheel_bar_bg_color = 8;
+        public static final int KCRoundProgressBar_bg_color = 8;
         /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bar_bg_width}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bg_width}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -311,59 +321,12 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:bar_bg_width
+          @attr name com.taotao.kcroundprogressbar_example:bg_width
         */
-        public static final int ProgressWheel_bar_bg_width = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bar_color}
-          attribute's value can be found in the {@link #ProgressWheel} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:bar_color
-        */
-        public static final int ProgressWheel_bar_color = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bar_length}
-          attribute's value can be found in the {@link #ProgressWheel} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:bar_length
-        */
-        public static final int ProgressWheel_bar_length = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#bar_width}
-          attribute's value can be found in the {@link #ProgressWheel} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:bar_width
-        */
-        public static final int ProgressWheel_bar_width = 3;
+        public static final int KCRoundProgressBar_bg_width = 9;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#border_color}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -375,10 +338,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:border_color
         */
-        public static final int ProgressWheel_border_color = 6;
+        public static final int KCRoundProgressBar_border_color = 6;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#border_width}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -391,10 +354,57 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:border_width
         */
-        public static final int ProgressWheel_border_width = 7;
+        public static final int KCRoundProgressBar_border_width = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#fg_color}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.taotao.kcroundprogressbar_example:fg_color
+        */
+        public static final int KCRoundProgressBar_fg_color = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#fg_length}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.taotao.kcroundprogressbar_example:fg_length
+        */
+        public static final int KCRoundProgressBar_fg_length = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#fg_width}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.taotao.kcroundprogressbar_example:fg_width
+        */
+        public static final int KCRoundProgressBar_fg_width = 3;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#loading_mode}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -405,10 +415,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:loading_mode
         */
-        public static final int ProgressWheel_loading_mode = 14;
+        public static final int KCRoundProgressBar_loading_mode = 14;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#max_value}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -419,10 +429,24 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:max_value
         */
-        public static final int ProgressWheel_max_value = 15;
+        public static final int KCRoundProgressBar_max_value = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#min_value}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.taotao.kcroundprogressbar_example:min_value
+        */
+        public static final int KCRoundProgressBar_min_value = 16;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#mode}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be one of the following constant values.</p>
@@ -436,10 +460,10 @@ containing a value of this type.
 </table>
           @attr name com.taotao.kcroundprogressbar_example:mode
         */
-        public static final int ProgressWheel_mode = 18;
+        public static final int KCRoundProgressBar_mode = 19;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#progress}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -450,10 +474,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:progress
         */
-        public static final int ProgressWheel_progress = 17;
+        public static final int KCRoundProgressBar_progress = 18;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#radius}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -466,10 +490,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:radius
         */
-        public static final int ProgressWheel_radius = 12;
+        public static final int KCRoundProgressBar_radius = 12;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#roll_delay_millis}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -480,10 +504,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:roll_delay_millis
         */
-        public static final int ProgressWheel_roll_delay_millis = 11;
+        public static final int KCRoundProgressBar_roll_delay_millis = 11;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#roll_speed}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -496,24 +520,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:roll_speed
         */
-        public static final int ProgressWheel_roll_speed = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#show_text}
-          attribute's value can be found in the {@link #ProgressWheel} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.taotao.kcroundprogressbar_example:show_text
-        */
-        public static final int ProgressWheel_show_text = 16;
+        public static final int KCRoundProgressBar_roll_speed = 10;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#start_angle}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be an integer value, such as "<code>100</code>".
@@ -524,10 +534,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:start_angle
         */
-        public static final int ProgressWheel_start_angle = 13;
+        public static final int KCRoundProgressBar_start_angle = 13;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#text}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -538,10 +548,10 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:text
         */
-        public static final int ProgressWheel_text = 0;
+        public static final int KCRoundProgressBar_text = 0;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#text_color}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -553,10 +563,24 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:text_color
         */
-        public static final int ProgressWheel_text_color = 1;
+        public static final int KCRoundProgressBar_text_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#text_display}
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.taotao.kcroundprogressbar_example:text_display
+        */
+        public static final int KCRoundProgressBar_text_display = 17;
         /**
           <p>This symbol is the offset where the {@link com.taotao.kcroundprogressbar_example.R.attr#text_size}
-          attribute's value can be found in the {@link #ProgressWheel} array.
+          attribute's value can be found in the {@link #KCRoundProgressBar} array.
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -569,6 +593,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.taotao.kcroundprogressbar_example:text_size
         */
-        public static final int ProgressWheel_text_size = 2;
+        public static final int KCRoundProgressBar_text_size = 2;
     };
 }
