@@ -1,4 +1,4 @@
-package com.mindpin.android;
+package com.mindpin.android.kcroundprogressbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -37,7 +37,7 @@ public class KCRoundProgressBar extends View {
 	private int fg_length = 60;
 	private int fg_width = 10;
 	private int border_width = 0;
-	private int bg_width;
+	private int bg_width = fg_width;
 	private int text_size = 18;
 	private int start_angle = -90;
 
@@ -411,13 +411,70 @@ public class KCRoundProgressBar extends View {
 	
 	
 	
+	/**
+	 * 注意：在view没有加载上来前view的width为0，会不起作用，要延时调用</br>
+	 * 设置环形厚度（环形厚度和组件宽度一半的比例值)
+	 * @param scale
+	 */
+	 public void set_thickness(float scale){
+		 fg_width = (int) (layout_width * scale);
+		 bg_width = fg_width;
+		 setupBounds();
+		 setupPaints();
+		 Log.e(VIEW_LOG_TAG, "set_thickness = " + fg_width);
+		 invalidate();
+     }
 	
-	
+	 
+	// 设置组件宽度，默认值为空，不设置宽度，组件无法初始化
+	 /**
+	  * @deprecated
+	  * @param px
+	  */
+	 public void set_width_px(int px){
+		 layout_width = px;
+		 layout_height = px;
+	     setupBounds();
+	     setupPaints();
+	     invalidate();
+	 }
+	 
+	 /**
+	  * @deprecated
+	  * @param dp
+	  */
+	 public void set_width_dp(int dp){
+		 layout_width = (int) (dp * getResources().getDisplayMetrics().densityDpi/160f);
+		 layout_height = layout_width;
+		 Log.d(VIEW_LOG_TAG, "width = " + layout_width + " density = " + getResources().getDisplayMetrics().densityDpi);
+	     setupBounds();
+	     setupPaints();
+         invalidate();
+	 }
+	 
+	/**
+	 *  设置是否显示外圈，默认不显示
+	 * @param flag
+	 */
+	 public void set_border_display(boolean flag){
+		 if(flag){
+			 if(border_width < 1) border_width = 4; 
+		 }else{
+			 border_width = 0;
+		 }
+		 setupBounds();
+		 setupPaints();
+		 invalidate();
+	 }
+	 
+	 
 	
 	
 	
 	
 	//=======================================get set============================
+	
+	
 	
     public boolean isLoading() {
 		return loading;

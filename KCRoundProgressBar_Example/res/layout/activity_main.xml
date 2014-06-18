@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <com.mindpin.android.KCRoundProgressBar
+        <com.mindpin.android.kcroundprogressbar.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_1"
             android:layout_width="100dp"
@@ -27,7 +27,7 @@
             android:background="#55aabbcc"
             android:padding="10dp" />
 
-        <com.mindpin.android.KCRoundProgressBar
+        <com.mindpin.android.kcroundprogressbar.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_2"
             android:layout_width="100dp"
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <com.mindpin.android.KCRoundProgressBar
+        <com.mindpin.android.kcroundprogressbar.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_3"
             android:layout_width="100dp"
@@ -69,7 +69,7 @@
             android:background="#ff000000"
             android:padding="10dp" />
 
-        <com.mindpin.android.KCRoundProgressBar
+        <com.mindpin.android.kcroundprogressbar.KCRoundProgressBar
             xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
             android:id="@+id/pro_4"
             android:layout_width="100dp"

@@ -1,13 +1,13 @@
 package com.taotao.kcroundprogressbar_example;
 
 
-import com.mindpin.android.KCRoundProgressBar;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+
+import com.mindpin.android.kcroundprogressbar.KCRoundProgressBar;
 
 
 public class MainActivity extends Activity {
@@ -26,8 +26,11 @@ public class MainActivity extends Activity {
 		pwThree = (KCRoundProgressBar) findViewById(R.id.pro_3);
 		pwFour = (KCRoundProgressBar) findViewById(R.id.pro_4);
 		
+		
 		pwOne.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
+				//pwOne.set_thickness(0.02f);
+				
 				if (!wheelRunning) {
 					wheelProgress = 0;
 					pwOne.reset();
